@@ -1,5 +1,7 @@
-name = "waga-protocol"
-compatibility_date = "2025-06-04"
-compatibility_flags = ["nodejs_compat"]
-main = ".worker-next/index.mjs"
-assets = { directory = ".workder-next/assets", binding = "ASSETS" }
+  main = ".open-next/worker.js"
+  name = "my-app"
+  compatibility_date = "2025-06-04"
+  compatibility_flags = ["nodejs_compat"]
+  [assets]
+  directory = ".open-next/assets"
+  binding = "ASSETS"

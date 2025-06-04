@@ -1,0 +1,22 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/explore/page": "/explore",
+  "/token-pre-sale/page": "/token-pre-sale",
+  "/page": "/",
+  "/admin/content/page": "/admin/content",
+  "/admin/settings/page": "/admin/settings",
+  "/admin/dashboard/page": "/admin/dashboard",
+  "/admin/users/page": "/admin/users",
+  "/community/dashboard/page": "/community/dashboard",
+  "/community/events/create/page": "/community/events/create",
+  "/admin/reports/page": "/admin/reports",
+  "/community/events/page": "/community/events",
+  "/community/forums/[id]/page": "/community/forums/[id]",
+  "/community/forums/new/page": "/community/forums/new",
+  "/community/founding-member/page": "/community/founding-member",
+  "/community/forums/page": "/community/forums",
+  "/community/members/page": "/community/members",
+  "/community/register/page": "/community/register",
+  "/community/resources/page": "/community/resources",
+  "/community/resources/upload/page": "/community/resources/upload"
+}
