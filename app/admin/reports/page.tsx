@@ -1,4 +1,5 @@
 "use client"
+export const runtime = "edge"
 
 import { useState, useEffect } from "react"
 import { Search, Filter, ChevronDown, Flag, AlertTriangle, CheckCircle, XCircle, MessageSquare } from "lucide-react"

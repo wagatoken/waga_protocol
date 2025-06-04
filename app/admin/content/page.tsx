@@ -1,4 +1,5 @@
 "use client"
+export const runtime = "edge"
 
 import { useState } from "react"
 import { Search, Filter, Plus, Edit, Trash2, ChevronDown, FileText, Video, Image, LinkIcon } from "lucide-react"

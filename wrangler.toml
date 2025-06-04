@@ -1,0 +1,13 @@
+name = "waga-protocol"
+compatibility_date = "2025-06-04"
+
+[build]
+command = "pnpm run build"
+
+[site]
+bucket = ".vercel/output/static"
+entry-point = ".vercel/output/functions/_middleware.mjs"
+
+[deploy]
+# Optional but useful
+workers_dev = true
