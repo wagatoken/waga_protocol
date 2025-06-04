@@ -1,7 +1,5 @@
 name = "waga-protocol"
 compatibility_date = "2025-06-04"
-
-main = ".vercel/output/static"
-
-[build]
-command = "pnpm run build"
+compatibility_flags = ["nodejs_compat"]
+main = ".worker-next/index.mjs"
+assets = { directory = ".workder-next/assets", binding = "ASSETS" }

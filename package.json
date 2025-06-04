@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "pages:build": "next build && next-on-pages --experimental-minify"
+    "pages:build": "npx @cloudflare/next-on-pages"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "latest",
