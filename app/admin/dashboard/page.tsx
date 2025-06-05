@@ -69,49 +69,49 @@ const fetchDashboardData = async () => {
       })
     }
 
-    return {
-      stats: [
-        {
-          label: "Total Users",
-          value: "12",
-          icon: <Users className="h-5 w-5 text-emerald-400" />,
-          change: "+12%",
-          route: "/admin/users",
-        },
-        {
-          label: "Active Discussions",
-          value: "3",
-          icon: <MessageSquare className="h-5 w-5 text-purple-400" />,
-          change: "New",
-          route: "/admin/content",
-        },
-        {
-          label: "Resources",
-          value: "5",
-          icon: <FileText className="h-5 w-5 text-emerald-400" />,
-          change: "+5",
-          route: "/admin/content",
-        },
-        {
-          label: "Upcoming Events",
-          value: "0",
-          icon: <Calendar className="h-5 w-5 text-purple-400" />,
-          change: "—",
-          route: "/admin/content",
-        },
-      ],
-      recentActivities: [
-        { type: "user", message: "New user registered: Maria Chen", time: "5 minutes ago" },
-        { type: "user", message: "New user registered: James Wilson", time: "2 hours ago" },
-        { type: "resource", message: "New resource uploaded: WAGA Protocol Introduction", time: "1 day ago" },
-        { type: "resource", message: "New resource uploaded: Getting Started Guide", time: "2 days ago" },
-      ],
-      growthData: {
-        userGrowth: 12,
-        engagementRate: 8,
-        resourceDownloads: 5,
-      },
-    }
+    // return {
+    //   stats: [
+    //     {
+    //       label: "Total Users",
+    //       value: "12",
+    //       icon: <Users className="h-5 w-5 text-emerald-400" />,
+    //       change: "+12%",
+    //       route: "/admin/users",
+    //     },
+    //     {
+    //       label: "Active Discussions",
+    //       value: "3",
+    //       icon: <MessageSquare className="h-5 w-5 text-purple-400" />,
+    //       change: "New",
+    //       route: "/admin/content",
+    //     },
+    //     {
+    //       label: "Resources",
+    //       value: "5",
+    //       icon: <FileText className="h-5 w-5 text-emerald-400" />,
+    //       change: "+5",
+    //       route: "/admin/content",
+    //     },
+    //     {
+    //       label: "Upcoming Events",
+    //       value: "0",
+    //       icon: <Calendar className="h-5 w-5 text-purple-400" />,
+    //       change: "—",
+    //       route: "/admin/content",
+    //     },
+    //   ],
+    //   recentActivities: [
+    //     { type: "user", message: "New user registered: Maria Chen", time: "5 minutes ago" },
+    //     { type: "user", message: "New user registered: James Wilson", time: "2 hours ago" },
+    //     { type: "resource", message: "New resource uploaded: WAGA Protocol Introduction", time: "1 day ago" },
+    //     { type: "resource", message: "New resource uploaded: Getting Started Guide", time: "2 days ago" },
+    //   ],
+    //   growthData: {
+    //     userGrowth: 12,
+    //     engagementRate: 8,
+    //     resourceDownloads: 5,
+    //   },
+    // }
   } else {
     // In production, fetch from Supabase
     try {
