@@ -1,5 +1,5 @@
   main = ".open-next/worker.js"
-  name = "my-app"
+  name = "waga-protocol-test"
   compatibility_date = "2025-06-04"
   compatibility_flags = ["nodejs_compat"]
   [assets]
