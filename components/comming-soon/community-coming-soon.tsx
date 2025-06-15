@@ -106,7 +106,7 @@ export default function CommunityComingSoon() {
             {/* Enhanced Social Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
               <Link
-                href="/linkedin"
+                href="https://www.linkedin.com/company/waga-token-official/?viewAsMember=true"
                 className="group relative flex items-center justify-center w-full sm:w-auto px-6 py-3 rounded-full bg-gradient-to-r from-emerald-400 to-emerald-600 hover:from-emerald-500 hover:to-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 <div className="flex items-center space-x-3">
@@ -116,7 +116,7 @@ export default function CommunityComingSoon() {
               </Link>
 
               <Link
-                href="/telegram"
+                href="https://t.me/wagatoken"
                 className="group relative flex items-center justify-center w-full sm:w-auto px-6 py-3 rounded-full bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 <div className="flex items-center space-x-3">
@@ -126,7 +126,7 @@ export default function CommunityComingSoon() {
               </Link>
 
               <Link
-                href="/twitter"
+                href="https://x.com/Wagatoken"
                 className="group relative flex items-center justify-center w-full sm:w-auto px-6 py-3 rounded-full bg-gradient-to-r from-purple-400 to-purple-600 hover:from-purple-500 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 <div className="flex items-center space-x-3">
