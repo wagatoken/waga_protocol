@@ -60,19 +60,19 @@ export function MainNav() {
           Demo
         </Link>
         <Link
-          href="/community/dashboard"
+          href="/comming-soon"
           className={cn(
             "nav-item",
-            isActive("/community") ? "active text-foreground" : "text-foreground/60 hover:text-foreground/80",
+            isActive("/comming-soon") ? "active text-foreground" : "text-foreground/60 hover:text-foreground/80",
           )}
         >
           Community
         </Link>
         <Link
-          href="/admin/dashboard"
+          href="/comming-soon"
           className={cn(
             "nav-item",
-            isActive("/admin") ? "active text-foreground" : "text-foreground/60 hover:text-foreground/80",
+            isActive("/comming-soon") ? "active text-foreground" : "text-foreground/60 hover:text-foreground/80",
           )}
         >
           Admin
