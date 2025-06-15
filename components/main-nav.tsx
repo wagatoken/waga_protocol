@@ -68,7 +68,7 @@ export function MainNav() {
         >
           Community
         </Link>
-        <Link
+        {/* <Link
           href="/comming-soon"
           className={cn(
             "nav-item",
@@ -76,7 +76,7 @@ export function MainNav() {
           )}
         >
           Admin
-        </Link>
+        </Link> */}
       </nav>
     </div>
   )
