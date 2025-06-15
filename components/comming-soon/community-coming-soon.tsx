@@ -124,19 +124,27 @@ export default function CommunityComingSoon() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="max-w-md mx-auto"
+            className="max-w-md mx-auto w-full px-2"
           >
             {!isSubmitted ? (
-              <form onSubmit={handleSubmit} className="flex gap-2 justify-center items-center">
+              <form
+                onSubmit={handleSubmit}
+                className="flex flex-col sm:flex-row gap-3 sm:gap-2 justify-center items-stretch sm:items-center"
+              >
                 <Input
                   type="email"
-                  placeholder="Please enter your email address"
+                  placeholder="Enter your email address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 bg-gray-800/50 border-gray-700 text-white placeholder-gray-400 backdrop-blur-sm"
+                  className="flex-1 bg-gray-800/50 border-gray-700 text-white placeholder-gray-400 backdrop-blur-sm h-12 sm:h-10 text-base sm:text-sm"
                   required
                 />
-                <Web3Button type="submit" variant="gradient" size="lg" className="w-full sm:w-auto px-6">
+                <Web3Button
+                  type="submit"
+                  variant="gradient"
+                  size="lg"
+                  className="w-full sm:w-auto px-6 h-12 sm:h-10 text-base sm:text-sm font-medium"
+                >
                   Notify Me
                 </Web3Button>
               </form>
