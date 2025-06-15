@@ -22,15 +22,26 @@ const gradientTextStyle = {
 }
 
 export default function CommunityComingSoon() {
-  const [email, setEmail] = useState("")
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [email, setEmail] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [alreadyOnWaitlist, setAlreadyOnWaitlist] = useState(false);
+
+  // Simulated waitlist for demo purposes
+  const [waitlist, setWaitlist] = useState<string[]>([]);
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     if (email) {
-      setIsSubmitted(true)
-      // Here you would typically send the email to your backend
-      console.log("Email submitted:", email)
+      if (waitlist.includes(email.trim().toLowerCase())) {
+        setAlreadyOnWaitlist(true);
+        setIsSubmitted(true);
+      } else {
+        setWaitlist((prev) => [...prev, email.trim().toLowerCase()]);
+        setAlreadyOnWaitlist(false);
+        setIsSubmitted(true);
+        // Here you would typically send the email to your backend
+        console.log("Email submitted:", email);
+      }
     }
   }
 
@@ -129,6 +140,11 @@ export default function CommunityComingSoon() {
                   Notify Me
                 </Web3Button>
               </form>
+            ) : alreadyOnWaitlist ? (
+              <div className="flex items-center justify-center space-x-2 text-yellow-400">
+                <Heart className="w-5 h-5" />
+                <span>You are already on the waitlist!</span>
+              </div>
             ) : (
               <div className="flex items-center justify-center space-x-2 text-emerald-400">
                 <Heart className="w-5 h-5" />
