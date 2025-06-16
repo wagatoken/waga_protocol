@@ -42,7 +42,7 @@ export default function CommunityComingSoon() {
         >
           {/* Coming Soon Text - More responsive sizing */}
           <motion.h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-bold tracking-tight mt-8 sm:mt-12 lg:mt-16 leading-tight"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-bold tracking-tight mt-8 sm:mt-12 lg:mt-16 leading-tight py-2"
             style={gradientTextStyle}
             animate={{
               backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
@@ -53,7 +53,7 @@ export default function CommunityComingSoon() {
               ease: "linear",
             }}
           >
-            Coming Soon
+            Coming Soon!
           </motion.h1>
 
           {/* Description */}
