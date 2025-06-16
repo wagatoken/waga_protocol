@@ -767,7 +767,7 @@ export default function Home() {
               {[
                 {
                   phase: "Phase 1: Initial Development",
-                  timeline: "Q1-Q2 2025",
+                  timeline: "Q2-Q4 2025",
                   milestones: [
                     "MVP development completion",
                     "Utility token (WAGAToken) presale launch",
@@ -777,7 +777,7 @@ export default function Home() {
                 },
                 {
                   phase: "Phase 2: Pilot & Feedback",
-                  timeline: "Q2-Q4 2025",
+                  timeline: "Q1-Q2 2026",
                   milestones: [
                     "Launch pilot study with coffee producers",
                     "Integrate DeFi functionalities for liquidity pools",
@@ -788,7 +788,7 @@ export default function Home() {
                 },
                 {
                   phase: "Phase 3: Scaling & Optimization",
-                  timeline: "Q1 2026",
+                  timeline: "Q2-Q4 2026",
                   milestones: [
                     "Implement learnings from pilot study",
                     "Advanced features like decentralized trade finance",
@@ -799,7 +799,7 @@ export default function Home() {
                 },
                 {
                   phase: "Phase 4: Full Platform Deployment",
-                  timeline: "Q2 2026",
+                  timeline: "Q1 2027",
                   milestones: [
                     "Full-scale platform deployment globally",
                     "Continuous improvements based on user feedback",

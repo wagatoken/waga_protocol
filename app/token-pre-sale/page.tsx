@@ -711,7 +711,7 @@ export default function TokenPreSalePage() {
             {[
               {
                 phase: "Phase 1: Initial Development",
-                timeline: "Q1-Q2 2025",
+                timeline: "Q2-Q4 2025",
                 description:
                   "Utility token (WAGAToken) presale launch alongside MVP development completion and WAGA Academy curriculum development.",
                 variant: "emerald",
@@ -719,7 +719,7 @@ export default function TokenPreSalePage() {
               },
               {
                 phase: "Phase 2: Pilot & Feedback",
-                timeline: "Q2-Q4 2025",
+                timeline: "Q1-Q2 2026",
                 description:
                   "Launch pilot study with coffee producers, integrate DeFi functionalities for liquidity pools, and run community-driven campaigns to boost adoption.",
                 variant: "purple",
@@ -727,7 +727,7 @@ export default function TokenPreSalePage() {
               },
               {
                 phase: "Phase 3: Scaling & Optimization",
-                timeline: "Q1 2026",
+                timeline: "Q2-Q4 2026",
                 description:
                   "Implement learnings from pilot study, add advanced features like decentralized trade finance, and secure global partnerships with coffee industry stakeholders.",
                 variant: "emerald",
@@ -735,7 +735,7 @@ export default function TokenPreSalePage() {
               },
               {
                 phase: "Phase 4: Full Platform Deployment",
-                timeline: "Q2 2026",
+                timeline: "Q1 2027",
                 description:
                   "Full-scale platform deployment globally with continuous improvements based on user feedback and expansion of WAGA Academy programs.",
                 variant: "purple",
