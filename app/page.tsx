@@ -788,7 +788,7 @@ export default function Home() {
                 },
                 {
                   phase: "Phase 3: Scaling & Optimization",
-                  timeline: "Q2-Q4 2026",
+                  timeline: "Q3-Q4 2026",
                   milestones: [
                     "Implement learnings from pilot study",
                     "Advanced features like decentralized trade finance",

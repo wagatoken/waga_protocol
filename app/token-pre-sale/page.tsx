@@ -727,7 +727,7 @@ export default function TokenPreSalePage() {
               },
               {
                 phase: "Phase 3: Scaling & Optimization",
-                timeline: "Q2-Q4 2026",
+                timeline: "Q3-Q4 2026",
                 description:
                   "Implement learnings from pilot study, add advanced features like decentralized trade finance, and secure global partnerships with coffee industry stakeholders.",
                 variant: "emerald",
