@@ -115,7 +115,7 @@ export default function Footer() {
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="https://x.com/WagaAcademy"
+              href="https://x.com/Wagatoken"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full bg-gradient-to-br from-emerald-950/50 to-purple-950/50 border border-emerald-500/30 hover:border-emerald-500/60 hover:bg-emerald-500/10 transition-all duration-300 animate-border-glow"
@@ -124,7 +124,7 @@ export default function Footer() {
               <Twitter className="h-5 w-5 text-emerald-400" />
             </Link>
             <Link
-              href="https://linkedin.com/company/waga-protocol"
+              href="https://www.linkedin.com/company/wagaprotocol"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full bg-gradient-to-br from-purple-950/50 to-emerald-950/50 border border-purple-500/30 hover:border-purple-500/60 hover:bg-purple-500/10 transition-all duration-300 animate-border-glow"
@@ -142,7 +142,7 @@ export default function Footer() {
               <Send className="h-5 w-5 text-emerald-400" />
             </Link>
             <Link
-              href="https://discord.gg/wagaprotocol"
+              href="https://discord.gg/Vn8Wj2Sz"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full bg-gradient-to-br from-purple-950/50 to-emerald-950/50 border border-purple-500/30 hover:border-purple-500/60 hover:bg-purple-500/10 transition-all duration-300 animate-border-glow"
@@ -151,7 +151,7 @@ export default function Footer() {
               <MessageSquare className="h-5 w-5 text-purple-400" />
             </Link>
             <Link
-              href="https://github.com/waga-protocol"
+              href="https://github.com/wagatoken/waga_protocol"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full bg-gradient-to-br from-emerald-950/50 to-purple-950/50 border border-emerald-500/30 hover:border-emerald-500/60 hover:bg-emerald-500/10 transition-all duration-300 animate-border-glow"
