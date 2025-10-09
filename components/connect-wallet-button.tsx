@@ -18,13 +18,13 @@ export default function ConnectWalletButton({
   className?: string;
 }) {
   // Format address for display (0x71C7...976F)
-  const formatAddress = (address: string) => {
-    return `${address.slice(0, 6)}...${address.slice(-4)}`;
+  const formatAddress = (address: string|undefined) => {
+    return address ? `${address.slice(0, 6)}...${address.slice(-4)}`: null;
   };
 
   // Generate avatar fallback from address
-  const generateAvatarFallback = (address: `0x${string}`) => {
-    return address.slice(2, 4).toUpperCase();
+  const generateAvatarFallback = (address: `0x${string}` | undefined) => {
+    return address?.slice(2, 4).toUpperCase();
   };
   const { disconnect } = useDisconnect();
   const { address } = useAccount();

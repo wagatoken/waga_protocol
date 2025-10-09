@@ -6,12 +6,11 @@ import { usePathname } from "next/navigation"
 import { MainNav } from "@/components/main-nav"
 import ConnectWalletButton from "@/components/connect-wallet-button"
 import Web3Button from "@/components/web3-button"
-import { useScrollTop } from "@/hooks/use-scroll-top"
 import { cn } from "@/lib/utils"
 import { Menu, X } from "lucide-react"
+import { ThemeToggle } from "./theme-toggle"
 
 export default function Navbar() {
-  const scrolled = useScrollTop()
   const pathname = usePathname()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -36,14 +35,19 @@ export default function Navbar() {
     <>
       <header
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 w-full border-b transition-all duration-300",
-          scrolled
-            ? "bg-emerald-950/95 backdrop-blur-md border-emerald-500/30 navbar-glow"
-            : "bg-emerald-950/80 backdrop-blur-sm border-emerald-500/10",
+          "fixed top-0 z-50 h-auto w-full border-b transition-all duration-300 flex justify-between p-3",
+          "bg-emerald-950/95 backdrop-blur-md border-emerald-500/30 navbar-glow"
         )}
       >
-        <div className="container flex h-16 items-center px-4 sm:px-6 lg:px-8 relative">
-          <div className="flex-1 flex justify-start">
+          <div className="">
+            <Link href="/" className="mr-6 flex items-center space-x-2">
+              <span className="text-3xl px-4 font-bold">
+                <span className="web3-dual-gradient-text-glow">WAGAProtocol</span>
+              </span>
+            </Link>
+          </div>
+
+          <div className="mx-auto">
             <MainNav />
           </div>
 
@@ -53,6 +57,7 @@ export default function Navbar() {
               <Web3Button variant="gradient" size="sm" asChild>
                 <Link href="/community/register">Join Community</Link>
               </Web3Button>
+              <ThemeToggle />
             </div>
 
             {/* Mobile menu button */}
@@ -65,7 +70,6 @@ export default function Navbar() {
               {isMobileMenuOpen ? <X /> : <Menu />}
             </button>
           </div>
-        </div>
       </header>
 
       {/* Mobile menu - moved outside the header to avoid positioning issues */}

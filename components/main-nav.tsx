@@ -16,12 +16,7 @@ export function MainNav() {
   }
 
   return (
-    <div className="flex items-center space-x-4">
-      <Link href="/" className="mr-6 flex items-center space-x-2">
-        <span className="text-xl font-bold">
-          <span className="web3-dual-gradient-text-glow">WAGAProtocol</span>
-        </span>
-      </Link>
+    <div className="flex justify-between w-full">
       <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
         <Link
           href="/#about"
