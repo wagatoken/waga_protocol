@@ -12,7 +12,6 @@ import WagmiComponentProvider from "@/components/WagmiComponentProvider";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { WalletProvider } from "@/context/wallet-context";
 import { Toaster } from "@/components/ui/toaster";
-import ScrollToTop from "@/components/scroll-to-top";
 
 const inter = Inter({ subsets: ["latin"] });
 

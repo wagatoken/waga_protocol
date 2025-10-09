@@ -11,7 +11,7 @@ export default function Hero(){
     const router = useRouter();
 
     return(
-        <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 bg-black/30">
+        <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-6">
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}

@@ -16,8 +16,8 @@ export function MainNav() {
   }
 
   return (
-    <div className="flex justify-between w-full">
-      <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+    <div className="flex w-full">
+      <nav className="hidden md:flex items-center justify-between space-x-6 text-sm font-medium">
         <Link
           href="/#about"
           className={cn(

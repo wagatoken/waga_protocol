@@ -131,8 +131,8 @@ export default function Navbar() {
                 </Link>
               </nav>
 
-              <div className="mt-8 space-y-4 relative z-10">
-                <ConnectWalletButton className="w-full" />
+              <div className="mt-8 space-y-4 relative z-50">
+                <ConnectWalletButton />
                 <Web3Button variant="gradient" size="lg" className="w-full" asChild>
                   <Link href="/community/register">Join Community</Link>
                 </Web3Button>

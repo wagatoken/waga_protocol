@@ -36,7 +36,7 @@ export default function ConnectWalletButton({
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <button className="account-dropdown-trigger">
-            <Avatar className="h-5 w-5 mr-1">
+            <Avatar className="h-5 w-5">
               <AvatarFallback className="bg-emerald-900/50 text-xs">
                 {generateAvatarFallback(address)}
               </AvatarFallback>
@@ -50,7 +50,7 @@ export default function ConnectWalletButton({
             className="text-red-400 focus:text-red-400 cursor-pointer"
             onClick={() => disconnect()}
           >
-            <LogOut className="mr-2 h-4 w-4" />
+            <LogOut className="h-4 w-4" />
             Disconnect
           </DropdownMenuItem>
         </DropdownMenuContent>

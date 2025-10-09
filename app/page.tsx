@@ -56,7 +56,10 @@ export default function Home() {
       <ParticleBackground />
       <HexagonGrid className="opacity-30" />
 
-      <Hero />
+      <Section id='home' className="bg-black/30">
+        <Hero />
+      </Section>
+
       <Section id="about">
         <AboutSection />
       </Section>
