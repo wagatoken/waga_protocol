@@ -16,63 +16,73 @@ export function MainNav() {
   }
 
   return (
-    <div className="flex w-full">
-      <nav className="hidden md:flex items-center justify-between space-x-6 text-sm font-medium">
-        <Link
-          href="/#about"
-          className={cn(
-            "nav-item",
-            isActive("/#about") ? "active text-foreground" : "text-foreground/60 hover:text-foreground/80",
-          )}
-        >
-          About
-        </Link>
-        <Link
-          href="/#features"
-          className={cn(
-            "nav-item",
-            isActive("/#features") ? "active text-foreground" : "text-foreground/60 hover:text-foreground/80",
-          )}
-        >
-          Features
-        </Link>
-        <Link
-          href="/#roadmap"
-          className={cn(
-            "nav-item",
-            isActive("/#roadmap") ? "active text-foreground" : "text-foreground/60 hover:text-foreground/80",
-          )}
-        >
-          Roadmap
-        </Link>
-        <Link
-          href="/explore"
-          className={cn(
-            "nav-item",
-            isActive("/explore") ? "active text-foreground" : "text-foreground/60 hover:text-foreground/80",
-          )}
-        >
-          Demo
-        </Link>
-        <Link
-          href="/community/dashboard"
-          className={cn(
-            "nav-item",
-            isActive("/community") ? "active text-foreground" : "text-foreground/60 hover:text-foreground/80",
-          )}
-        >
-          Community
-        </Link>
-        <Link
-          href="/admin/dashboard"
-          className={cn(
-            "nav-item",
-            isActive("/admin") ? "active text-foreground" : "text-foreground/60 hover:text-foreground/80",
-          )}
-        >
-          Admin
-        </Link>
-      </nav>
-    </div>
+    <nav className="flex items-center gap-1">
+      <Link
+        href="/#about"
+        className={cn(
+          "px-3 py-2 text-sm font-medium rounded-md transition-colors",
+          isActive("/#about")
+            ? "text-foreground bg-accent"
+            : "text-muted-foreground hover:text-foreground hover:bg-accent/50",
+        )}
+      >
+        About
+      </Link>
+      <Link
+        href="/#features"
+        className={cn(
+          "px-3 py-2 text-sm font-medium rounded-md transition-colors",
+          isActive("/#features")
+            ? "text-foreground bg-accent"
+            : "text-muted-foreground hover:text-foreground hover:bg-accent/50",
+        )}
+      >
+        Features
+      </Link>
+      <Link
+        href="/#roadmap"
+        className={cn(
+          "px-3 py-2 text-sm font-medium rounded-md transition-colors",
+          isActive("/#roadmap")
+            ? "text-foreground bg-accent"
+            : "text-muted-foreground hover:text-foreground hover:bg-accent/50",
+        )}
+      >
+        Roadmap
+      </Link>
+      <Link
+        href="/explore"
+        className={cn(
+          "px-3 py-2 text-sm font-medium rounded-md transition-colors",
+          isActive("/explore")
+            ? "text-foreground bg-accent"
+            : "text-muted-foreground hover:text-foreground hover:bg-accent/50",
+        )}
+      >
+        Demo
+      </Link>
+      <Link
+        href="/community/dashboard"
+        className={cn(
+          "px-3 py-2 text-sm font-medium rounded-md transition-colors",
+          isActive("/community")
+            ? "text-foreground bg-accent"
+            : "text-muted-foreground hover:text-foreground hover:bg-accent/50",
+        )}
+      >
+        Community
+      </Link>
+      <Link
+        href="/admin/dashboard"
+        className={cn(
+          "px-3 py-2 text-sm font-medium rounded-md transition-colors",
+          isActive("/admin")
+            ? "text-foreground bg-accent"
+            : "text-muted-foreground hover:text-foreground hover:bg-accent/50",
+        )}
+      >
+        Admin
+      </Link>
+    </nav>
   )
 }

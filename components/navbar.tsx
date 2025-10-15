@@ -35,109 +35,118 @@ export default function Navbar() {
     <>
       <header
         className={cn(
-          "fixed top-0 z-50 h-auto w-full border-b transition-all duration-300 flex justify-between p-3",
-          "bg-emerald-950/95 backdrop-blur-md border-emerald-500/30 navbar-glow"
+          "fixed top-0 z-50 w-full bg-foreground/40 backdrop-blur ",
         )}
       >
-          <div className="">
-            <Link href="/" className="mr-6 flex items-center space-x-2">
-              <span className="text-3xl px-4 font-bold">
-                <span className="web3-dual-gradient-text-glow">WAGAProtocol</span>
-              </span>
-            </Link>
-          </div>
+        <div className="container flex h-16 items-center justify-between px-4 md:px-6">
+          <Link href="/" className="flex items-center space-x-2 transition-opacity hover:opacity-80 md:px-28 px-6">
+            <span className="text-xl font-bold tracking-tight">
+              <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">WAGA</span>
+              -
+              <span className="text-foreground">Protocol</span>
+            </span>
+          </Link>
 
-          <div className="mx-auto">
+          <div className="hidden md:flex flex-1 justify-center ">
             <MainNav />
           </div>
 
-          <div className="flex items-center space-x-4">
-            <div className="hidden md:flex items-center space-x-4">
+          <div className="flex items-center gap-3">
+            <div className="hidden md:flex items-center gap-3">
+              <ThemeToggle />
               <ConnectWalletButton />
               <Web3Button variant="gradient" size="sm" asChild>
                 <Link href="/community/register">Join Community</Link>
               </Web3Button>
-              <ThemeToggle />
             </div>
 
             {/* Mobile menu button */}
             <button
-              className="mobile-menu-toggle md:hidden"
+              className="md:hidden p-2 hover:bg-accent rounded-md transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-expanded={isMobileMenuOpen}
+              aria-label="Toggle menu"
             >
-              <span className="sr-only">Open main menu</span>
-              {isMobileMenuOpen ? <X /> : <Menu />}
+              {isMobileMenuOpen ? '': <Menu className="h-5 w-5" />}
             </button>
           </div>
+        </div>
       </header>
 
-      {/* Mobile menu - moved outside the header to avoid positioning issues */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md overflow-y-auto md:hidden">
+        <div className="fixed inset-0 z-50 bg-background md:hidden">
           <div className="flex flex-col h-full">
-            <div className="h-16 flex items-center justify-end px-4">
-              <button className="mobile-menu-toggle" onClick={() => setIsMobileMenuOpen(false)}>
-                <X />
+            {/* Mobile header */}
+            <div className="h-16 flex items-center justify-end w-full px-4 border-b border-border/40">
+              
+              <button
+                className="p-2 hover:bg-accent rounded-md transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+                aria-label="Close menu"
+              >
+                <X className="h-5 w-5" />
               </button>
             </div>
 
-            <div className="flex-1 px-4 pb-6">
-              <div className="absolute inset-0 bg-gradient-to-b from-emerald-900/10 to-purple-900/10 pointer-events-none"></div>
-              <div className="absolute inset-0 web3-grid-bg opacity-10 pointer-events-none"></div>
-
-              <nav className="flex flex-col space-y-4 mt-4 relative z-10">
+            {/* Mobile navigation */}
+            <nav className="flex-1 overflow-y-auto px-4 py-6">
+              <div className="flex flex-col space-y-1">
                 <Link
                   href="/#about"
-                  className="text-lg font-medium text-gray-300 hover:text-emerald-400 transition-colors py-3 border-b border-gray-800/50 navbar-link-hover"
+                  className="px-4 py-3 text-base font-medium rounded-lg hover:bg-accent transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   About
                 </Link>
                 <Link
                   href="/#features"
-                  className="text-lg font-medium text-gray-300 hover:text-emerald-400 transition-colors py-3 border-b border-gray-800/50 navbar-link-hover"
+                  className="px-4 py-3 text-base font-medium rounded-lg hover:bg-accent transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Features
                 </Link>
                 <Link
                   href="/#roadmap"
-                  className="text-lg font-medium text-gray-300 hover:text-emerald-400 transition-colors py-3 border-b border-gray-800/50 navbar-link-hover"
+                  className="px-4 py-3 text-base font-medium rounded-lg hover:bg-accent transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Roadmap
                 </Link>
                 <Link
                   href="/explore"
-                  className="text-lg font-medium text-gray-300 hover:text-emerald-400 transition-colors py-3 border-b border-gray-800/50 navbar-link-hover"
+                  className="px-4 py-3 text-base font-medium rounded-lg hover:bg-accent transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Demo
                 </Link>
                 <Link
                   href="/community/dashboard"
-                  className="text-lg font-medium text-gray-300 hover:text-emerald-400 transition-colors py-3 border-b border-gray-800/50 navbar-link-hover"
+                  className="px-4 py-3 text-base font-medium rounded-lg hover:bg-accent transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Community
                 </Link>
                 <Link
                   href="/admin/dashboard"
-                  className="text-lg font-medium text-gray-300 hover:text-emerald-400 transition-colors py-3 border-b border-gray-800/50 navbar-link-hover"
+                  className="px-4 py-3 text-base font-medium rounded-lg hover:bg-accent transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Admin
                 </Link>
-              </nav>
+              </div>
 
-              <div className="mt-8 space-y-4 relative z-50">
+              {/* Mobile actions */}
+              <div className="mt-8 space-y-3 pb-6">
+                <div className="flex items-center justify-between px-4 py-3">
+                  <span className="text-sm font-medium text-muted-foreground">Theme</span>
+                  <ThemeToggle />
+                </div>
                 <ConnectWalletButton />
                 <Web3Button variant="gradient" size="lg" className="w-full" asChild>
                   <Link href="/community/register">Join Community</Link>
                 </Web3Button>
               </div>
-            </div>
+            </nav>
           </div>
         </div>
       )}

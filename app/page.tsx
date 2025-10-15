@@ -52,35 +52,35 @@ const Section = ({ children, id, className = "" }: { children: React.ReactNode; 
 export default function Home() {
  
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden bg-gradient-to-b from-background via-background to-muted ">
       <ParticleBackground />
-      <HexagonGrid className="opacity-30" />
+      <HexagonGrid className="dark:opacity-10" />
 
-      <Section id='home' className="bg-black/30">
+      <Section id='/' >
         <Hero />
       </Section>
 
-      <Section id="about">
+      <Section id="about" className="bg-gray-900/20">
         <AboutSection />
       </Section>
 
-      <Section id="features" className="bg-black/30">
+      <Section id="features" >
         <FeaturesSection />
       </Section>
 
-      <Section>
+      <Section className="bg-gray-900/20">
         <BenefitsSection />
       </Section>
 
-      <Section className="bg-black/30">
+      <Section>
         <TechnologiesSection />
       </Section>
 
-      <Section id="roadmap">
+      <Section id="roadmap" className="bg-gray-900/20">
         <Roadmap />
       </Section>
 
-      <Section id="contact" className="bg-black/30">
+      <Section id="contact" >
         <Cta/>
       </Section>
     </div>

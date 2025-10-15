@@ -35,12 +35,7 @@ export default function ConnectWalletButton({
     return (
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <button className="account-dropdown-trigger">
-            <Avatar className="h-5 w-5">
-              <AvatarFallback className="bg-emerald-900/50 text-xs">
-                {generateAvatarFallback(address)}
-              </AvatarFallback>
-            </Avatar>
+          <button className="account-dropdown-trigger flex justify-evenly items-center gap-2 ">
             <span className="relative z-10">{formatAddress(address)}</span>
             <ChevronDown className="ml-1 h-3 w-3" />
           </button>

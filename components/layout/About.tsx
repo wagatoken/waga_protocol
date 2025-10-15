@@ -1,114 +1,150 @@
 "use client"
-
-import type React from "react"
 import { motion } from "framer-motion"
-import { ChevronRight } from "lucide-react"
+import { ArrowRight, Sparkles, Package } from "lucide-react"
 import Link from "next/link"
-import Web3Card from "@/components/web3-card"
+import { Button } from "@/components/ui/button"
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 }
 
-const gradientTextStyle = {
-  color: "transparent",
-  backgroundClip: "text",
-  WebkitBackgroundClip: "text",
-  backgroundImage:
-    "linear-gradient(to right, rgba(16, 185, 129, 1), rgba(147, 51, 234, 1), rgba(16, 185, 129, 1))",
-  backgroundSize: "300% auto",
-}
-
-export default function AboutSection(){
+export default function AboutSection() {
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-3xl text-center">
-        <h2 className="mb-4 text-2xl sm:text-3xl font-bold tracking-tight md:text-4xl">
-          <span className="web3-dual-gradient-text-glow" style={gradientTextStyle}>
-            About WAGA Protocol
-          </span>
-        </h2>
-        <p className="mb-8 md:mb-12 text-base md:text-lg text-gray-400">
-          Revolutionizing the coffee industry with a two-phase approach to blockchain integration
-        </p>
+    <section className="relative py-24 md:py-32 px-6 overflow-hidden">
+
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        <motion.div
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.2, 0.4, 0.2],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Number.POSITIVE_INFINITY,
+            ease: "easeInOut",
+          }}
+          className="absolute top-1/4 -right-32 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl"
+        />
       </div>
 
-      <div className="grid gap-8 md:gap-12 md:grid-cols-2">
-        <motion.div variants={fadeIn} initial="hidden" animate="visible" className="flex flex-col justify-center">
-          <h3 className="mb-3 md:mb-4 text-xl md:text-2xl font-bold text-emerald-400">Our Vision</h3>
-          <p className="mb-4 md:mb-6 text-gray-300 text-sm md:text-base">
-            WAGA Protocol envisions a future where smallholder farmers, cooperatives, roasters, and consumers
-            operate in a more inclusive, transparent, and sustainable coffee value chain.
-          </p>
-          <p className="mb-4 md:mb-6 text-gray-300 text-sm md:text-base">
-            By leveraging blockchain and DeFi technologies, we aim to create an ecosystem where all participants
-            thrive while contributing to the growth of a global, sustainable coffee industry.
-          </p>
-          <div className="mt-2 md:mt-4">
-            <Link
-              href="#features"
-              className="group inline-flex items-center text-emerald-500 hover:text-emerald-400 text-sm md:text-base"
-            >
-              Learn more about our approach
-              <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Link>
+      <div className="container max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mx-auto max-w-3xl text-center mb-16 md:mb-20"
+        >
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-600/5 border border-emerald-800/10 mb-6">
+            <Sparkles className="w-4 h-4 text-accent" />
+            <span className="text-sm font-medium text-foreground">Our Mission</span>
           </div>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
+            <span className="bg-gradient-to-r from-accent via-emerald-400 to-accent bg-clip-text text-transparent">
+              About WAGA Protocol
+            </span>
+          </h2>
+          <p className="text-lg md:text-xl text-muted-foreground text-pretty leading-relaxed">
+            Revolutionizing the coffee industry with a two-phase approach to blockchain integration
+          </p>
         </motion.div>
 
-        <motion.div variants={fadeIn} initial="hidden" animate="visible">
-          <Web3Card variant="dual" className="h-full p-4 sm:p-6 web3-card-glow">
-            <h3 className="mb-4 md:mb-6 text-xl md:text-2xl font-bold text-purple-300 purple-glow flex flex-wrap items-center">
-              <div className="relative mr-3 mb-2 sm:mb-0">
-                <div className="absolute -inset-1 rounded-full bg-purple-500/20 blur-sm"></div>
-                <div className="relative flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-purple-400 to-purple-600 shadow-lg">
-                  <svg
-                    className="h-4 w-4 text-black"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12 8V16M8 12H16M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+        <div className="grid gap-8 lg:gap-12 lg:grid-cols-2 items-center">
+          {/* Vision Section */}
+          <motion.div
+            variants={fadeIn}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="space-y-6"
+          >
+            <div className="space-y-4">
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground">Our Vision</h3>
+              <div className="space-y-4 text-base md:text-lg text-muted-foreground leading-relaxed">
+                <p>
+                  WAGA Protocol envisions a future where smallholder farmers, cooperatives, roasters, and consumers
+                  operate in a more inclusive, transparent, and sustainable coffee value chain.
+                </p>
+                <p>
+                  By leveraging blockchain and DeFi technologies, we aim to create an ecosystem where all participants
+                  thrive while contributing to the growth of a global, sustainable coffee industry.
+                </p>
+              </div>
+            </div>
+
+            <Button
+              variant="outline"
+              className="group border-2 border-foreground/20 hover:border-accent hover:bg-accent/5 transition-all bg-transparent"
+              asChild
+            >
+              <Link href="#features">
+                Learn more about our approach
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </Button>
+          </motion.div>
+
+          {/* Two-Phase MVP Card */}
+          <motion.div variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+            <div className="relative rounded-2xl border border-accent/20 bg-gradient-to-br from-accent/5 via-background to-purple-500/5 p-6 md:p-8 backdrop-blur-sm">
+              <div className="flex items-start gap-4 mb-8">
+                <div className="relative flex-shrink-0">
+                  <div className="absolute -inset-2 rounded-full bg-purple-500/20 blur-md" />
+                  <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-purple-400 to-purple-600 shadow-lg">
+                    <Package className="h-6 w-6 text-white" />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">Two-Phase MVP Deployment</h3>
+                  <p className="text-sm text-muted-foreground">Strategic rollout for maximum impact</p>
                 </div>
               </div>
-              <span>Two-Phase MVP Deployment</span>
-            </h3>
 
-            <div className="mb-4 md:mb-6 space-y-3 md:space-y-4">
-              <div className="rounded-lg border border-purple-500/20 bg-black/50 p-3 sm:p-4 backdrop-blur-sm">
-                <h4 className="mb-1 md:mb-2 text-base md:text-lg font-semibold text-purple-300">
-                  Phase 1: Retail Coffee Traceability
-                </h4>
-                <p className="text-gray-400 text-sm md:text-base">
-                  A consumer-facing traceability solution for roasted coffee bags with QR code scanning and
-                  blockchain verification.
-                </p>
+              <div className="space-y-4 mb-6">
+                <div className="group rounded-xl border border-accent/30 bg-background/50 p-5 backdrop-blur-sm transition-all hover:border-accent/50 hover:bg-accent/5">
+                  <div className="flex items-start gap-3 mb-3">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent/20 text-accent font-bold text-sm flex-shrink-0">
+                      1
+                    </div>
+                    <div>
+                      <h4 className="text-base md:text-lg font-semibold text-foreground mb-1">
+                        Retail Coffee Traceability
+                      </h4>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        A consumer-facing traceability solution for roasted coffee bags with QR code scanning and
+                        blockchain verification.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="group rounded-xl border border-purple-500/30 bg-background/50 p-5 backdrop-blur-sm transition-all hover:border-purple-500/50 hover:bg-purple-500/5">
+                  <div className="flex items-start gap-3 mb-3">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-purple-500/20 text-purple-400 font-bold text-sm flex-shrink-0">
+                      2
+                    </div>
+                    <div>
+                      <h4 className="text-base md:text-lg font-semibold text-foreground mb-1">
+                        Wholesale Export Tokenization
+                      </h4>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        A blockchain-based trade finance system for bulk coffee exports with DeFi integration and
+                        tokenized assets.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              <div className="rounded-lg border border-emerald-500/20 bg-black/50 p-3 sm:p-4 backdrop-blur-sm">
-                <h4 className="mb-1 md:mb-2 text-base md:text-lg font-semibold text-emerald-300">
-                  Phase 2: Wholesale Export Tokenization
-                </h4>
-                <p className="text-gray-400 text-sm md:text-base">
-                  A blockchain-based trade finance system for bulk coffee exports with DeFi integration and
-                  tokenized assets.
-                </p>
+              <div className="flex items-center justify-end gap-2">
+                <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+                <span className="text-sm font-medium text-accent">Launching Q2 2025</span>
               </div>
             </div>
-
-            <div className="text-right">
-              <span className="text-xs sm:text-sm text-purple-300">Launching Q2 2025</span>
-            </div>
-          </Web3Card>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
-    </div>
+    </section>
   )
 }

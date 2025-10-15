@@ -167,7 +167,7 @@ export default function ParticleBackground() {
 
   return (
     <>
-      <canvas ref={canvasRef} className="fixed inset-0 z-0 pointer-events-none" style={{ opacity: 0.6 }} />
+      <canvas ref={canvasRef} className="fixed inset-0 z-0 pointer-events-none" style={{ opacity: 1 }} />
       <div className="hexagon-pattern"></div>
     </>
   )

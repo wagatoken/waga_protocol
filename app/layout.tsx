@@ -34,14 +34,14 @@ export default function RootLayout({
         <WagmiComponentProvider>
           <ThemeProvider
             attribute="class"
-            defaultTheme="dark"
+            defaultTheme="system"
             enableSystem
             disableTransitionOnChange
           >
             <WalletProvider>
               <DemoProvider>
                 <CommunityProvider>
-                  <div className="flex min-h-screen flex-col">
+                  <div className="flex min-h-screen flex-col bg-secondary">
                     <Navbar />
                     <main className="flex-1">{children}</main>
                     <Footer />

@@ -8,6 +8,17 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "*.{js,ts,jsx,tsx,mdx}",
   ],
+  // ...existing code...
+  // ensure utility classes used for gradient text / webkit prefixed rules are not purged
+  safelist: [
+    "bg-clip-text",
+    "text-transparent",
+    "[-webkit-background-clip:text]",
+    "[-webkit-text-fill-color:transparent]",
+    "from-accent",
+    "via-emerald-400",
+    "to-accent",
+  ],
   theme: {
     container: {
       center: true,
@@ -21,7 +32,7 @@ const config: Config = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
+        background: "var(--background)",
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
@@ -39,10 +50,7 @@ const config: Config = {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
         },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
+        accent: "var(--accent)",
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
@@ -147,8 +155,6 @@ const config: Config = {
         "pulse-slow": "pulse-slow 3s ease-in-out infinite",
       },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "emerald-teal-gradient": "linear-gradient(to right, #10b981, #14b8a6)",
         "emerald-gold-gradient": "linear-gradient(to right, #10b981, #f59e0b)",
         "emerald-purple-gradient": "linear-gradient(to right, #10b981, #8b5cf6)",
