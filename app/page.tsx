@@ -60,7 +60,7 @@ export default function Home() {
         <Hero />
       </Section>
 
-      <Section id="about" className="bg-gray-900/20">
+      <Section id="about" className="bg-gray-900/10">
         <AboutSection />
       </Section>
 
@@ -68,7 +68,7 @@ export default function Home() {
         <FeaturesSection />
       </Section>
 
-      <Section className="bg-gray-900/20">
+      <Section className="bg-gray-900/10">
         <BenefitsSection />
       </Section>
 
@@ -76,7 +76,7 @@ export default function Home() {
         <TechnologiesSection />
       </Section>
 
-      <Section id="roadmap" className="bg-gray-900/20">
+      <Section id="roadmap" className="bg-gray-900/10">
         <Roadmap />
       </Section>
 

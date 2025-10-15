@@ -23,7 +23,6 @@ const gradientTextStyle = {
 export default function Cta(){
     return(
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <DynamicGlowCard variant="emerald" className="mx-auto max-w-4xl p-3 sm:p-4 md:p-8 lg:p-12" intensity="high">
             <motion.div variants={fadeIn}>
               <h2 className="mb-3 md:mb-4 text-2xl sm:text-3xl font-bold tracking-tight md:text-4xl text-center">
                 <span className="web3-dual-gradient-text-glow" style={gradientTextStyle}>
@@ -43,7 +42,6 @@ export default function Cta(){
                 </Web3Button>
               </div>
             </motion.div>
-          </DynamicGlowCard>
         </div>
     )
 }

@@ -1,9 +1,7 @@
 "use client"
 
-import React from "react"
 import { motion } from "framer-motion"
 import { Coffee, Shield, BarChart3, Leaf, Globe, Zap } from "lucide-react"
-import DynamicGlowCard from "@/components/dynamic-glow-card"
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -15,130 +13,145 @@ const staggerContainer = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0.15,
     },
   },
 }
 
-const gradientTextStyle = {
-  color: "transparent",
-  backgroundClip: "text",
-  WebkitBackgroundClip: "text",
-  backgroundImage:
-    "linear-gradient(to right, rgba(16, 185, 129, 1), rgba(147, 51, 234, 1), rgba(16, 185, 129, 1))",
-  backgroundSize: "300% auto",
-}
-
-export default function FeaturesSection(){
+export default function FeaturesSection() {
   const features = [
     {
-      icon: (
-        <div className="relative">
-          <div className="absolute -inset-1 rounded-full bg-emerald-500/20 blur-sm"></div>
-          <div className="relative flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-gradient-to-br from-emerald-400 to-teal-500 shadow-lg">
-            <Coffee className="h-5 w-5 md:h-6 md:w-6 text-black" />
-          </div>
-        </div>
-      ),
+      icon: Coffee,
       title: "Tokenized Coffee Reserves",
-      description:
-        "Digitize coffee into traceable and tradable ERC-1155 tokens secured by real-world coffee batches.",
-      variant: "emerald" as const,
+      description: "Digitize coffee into traceable and tradable ERC-1155 tokens secured by real-world coffee batches.",
+      gradient: "from-accent to-emerald-400",
     },
     {
-      icon: (
-        <div className="relative">
-          <div className="absolute -inset-1 rounded-full bg-purple-500/20 blur-sm"></div>
-          <div className="relative flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-gradient-to-br from-purple-400 to-purple-600 shadow-lg">
-            <Shield className="h-5 w-5 md:h-6 md:w-6 text-black" />
-          </div>
-        </div>
-      ),
+      icon: Shield,
       title: "Transparency & Traceability",
-      description:
-        "Track coffee batches from farm to cup, verifying ethical, quality, and sustainability parameters.",
-      variant: "purple" as const,
+      description: "Track coffee batches from farm to cup, verifying ethical, quality, and sustainability parameters.",
+      gradient: "from-purple-500 to-purple-600",
     },
     {
-      icon: (
-        <div className="relative">
-          <div className="absolute -inset-1 rounded-full bg-emerald-500/20 blur-sm"></div>
-          <div className="relative flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-gradient-to-br from-teal-400 to-emerald-500 shadow-lg">
-            <BarChart3 className="h-5 w-5 md:h-6 md:w-6 text-black" />
-          </div>
-        </div>
-      ),
+      icon: BarChart3,
       title: "DeFi Integration",
-      description:
-        "Access community-funded liquidity pools and tokenized collateral for loans and trade finance.",
-      variant: "emerald" as const,
+      description: "Access community-funded liquidity pools and tokenized collateral for loans and trade finance.",
+      gradient: "from-emerald-400 to-accent",
     },
     {
-      icon: (
-        <div className="relative">
-          <div className="absolute -inset-1 rounded-full bg-purple-500/20 blur-sm"></div>
-          <div className="relative flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-gradient-to-br from-purple-400 to-purple-600 shadow-lg">
-            <Leaf className="h-5 w-5 md:h-6 md:w-6 text-black" />
-          </div>
-        </div>
-      ),
+      icon: Leaf,
       title: "Sustainable Farming",
       description: "Incentivize and reward sustainable farming practices through transparent verification.",
-      variant: "purple" as const,
+      gradient: "from-purple-500 to-purple-600",
     },
     {
-      icon: (
-        <div className="relative">
-          <div className="absolute -inset-1 rounded-full bg-emerald-500/20 blur-sm"></div>
-          <div className="relative flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-gradient-to-br from-cyan-400 to-teal-500 shadow-lg">
-            <Globe className="h-5 w-5 md:h-6 md:w-6 text-black" />
-          </div>
-        </div>
-      ),
+      icon: Globe,
       title: "Global Marketplace",
       description: "Connect farmers directly with buyers worldwide through our decentralized marketplace.",
-      variant: "emerald" as const,
+      gradient: "from-cyan-400 to-accent",
     },
     {
-      icon: (
-        <div className="relative">
-          <div className="absolute -inset-1 rounded-full bg-purple-500/20 blur-sm"></div>
-          <div className="relative flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-gradient-to-br from-purple-400 to-purple-600 shadow-lg">
-            <Zap className="h-5 w-5 md:h-6 md:w-6 text-black" />
-          </div>
-        </div>
-      ),
+      icon: Zap,
       title: "WAGAToken Utility",
-      description:
-        "Access platform services, lower transaction costs, and earn rewards through our native token.",
-      variant: "purple" as const,
+      description: "Access platform services, lower transaction costs, and earn rewards through our native token.",
+      gradient: "from-purple-500 to-purple-600",
     },
   ]
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-3xl text-center">
-        <h2 className="mb-4 text-2xl sm:text-3xl font-bold tracking-tight md:text-4xl">
-          <span className="web3-dual-gradient-text-glow" style={gradientTextStyle}>
-            Key Features
-          </span>
-        </h2>
-        <p className="mb-8 md:mb-16 text-base md:text-lg text-gray-400">
-          Our platform combines blockchain technology with real-world coffee value chain solutions
-        </p>
+    <section className="relative py-24 md:py-32 px-6 overflow-hidden">
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] dark:bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
       </div>
 
-      <motion.div variants={staggerContainer} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-        {features.map((feature, index) => (
-          <motion.div key={index} variants={fadeIn}>
-            <DynamicGlowCard variant={feature.variant} className="h-full p-4 sm:p-6" intensity="medium">
-              <div className="mb-3 md:mb-4">{feature.icon}</div>
-              <h3 className="mb-2 text-lg md:text-xl font-bold text-emerald-300 glow-text">{feature.title}</h3>
-              <p className="text-gray-400 text-sm md:text-base">{feature.description}</p>
-            </DynamicGlowCard>
-          </motion.div>
-        ))}
-      </motion.div>
-    </div>
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        <motion.div
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.2, 0.4, 0.2],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Number.POSITIVE_INFINITY,
+            ease: "easeInOut",
+          }}
+          className="absolute top-1/3 -left-32 w-80 h-80 bg-accent/20 rounded-full blur-3xl"
+        />
+        <motion.div
+          animate={{
+            scale: [1, 1.3, 1],
+            opacity: [0.15, 0.3, 0.15],
+          }}
+          transition={{
+            duration: 12,
+            repeat: Number.POSITIVE_INFINITY,
+            ease: "easeInOut",
+            delay: 2,
+          }}
+          className="absolute bottom-1/3 -right-32 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl"
+        />
+      </div>
+
+      <div className="container mx-auto max-w-7xl">
+        <div className="mx-auto max-w-3xl text-center mb-16 md:mb-20">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6"
+          >
+            <span className="bg-gradient-to-r from-accent via-emerald-400 to-accent bg-clip-text text-transparent">
+              Key Features
+            </span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-lg md:text-xl text-muted-foreground text-pretty leading-relaxed"
+          >
+            Our platform combines blockchain technology with real-world coffee value chain solutions
+          </motion.p>
+        </div>
+
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+        >
+          {features.map((feature, index) => {
+            const Icon = feature.icon
+            return (
+              <motion.div key={index} variants={fadeIn}>
+                <div className="group relative h-full p-8 rounded-2xl bg-card/50 backdrop-blur-sm border border-emerald-950/90 hover:border-emerald-700/50 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-700/5">
+                  <div className="mb-6">
+                    <div className="relative inline-flex">
+                      <div
+                        className={`absolute inset-0 rounded-xl bg-gradient-to-br ${feature.gradient} opacity-20 blur-xl group-hover:opacity-30 transition-opacity`}
+                      />
+                      <div
+                        className={`relative flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br ${feature.gradient} shadow-lg`}
+                      >
+                        <Icon className="h-7 w-7 text-white" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
+                    {feature.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+                </div>
+              </motion.div>
+            )
+          })}
+        </motion.div>
+      </div>
+    </section>
   )
 }
