@@ -43,9 +43,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-400/20 border border-emerald-800/10 mb-8"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/50 border border-emerald-800/10 mb-8"
         >
-          <Sparkles className="w-4 h-4 text-accent" />
+          <Sparkles className="w-4 h-4 " />
           <span className="text-sm font-medium text-foreground">Powered by Blockchain Technology</span>
         </motion.div>
 
@@ -55,9 +55,9 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-balance mb-6"
         >
-          <span className="block text-foreground">WAGA Protocol</span>
+          <span className="block text-primary">WAGA Protocol</span>
           <span 
-            className="block bg-gradient-to-r from-accent via-emerald-400 to-accent bg-clip-text text-transparent py-3">
+            className="block  py-3">
             Empowering Coffee
           </span>
         </motion.h1>

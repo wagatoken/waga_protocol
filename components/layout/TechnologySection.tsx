@@ -63,7 +63,7 @@ export default function TechnologiesSection() {
           className="mx-auto max-w-3xl text-center mb-16"
         >
           <h2 className="mb-4 text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
-            <span className="bg-gradient-to-r from-accent via-emerald-400 to-accent bg-clip-text text-transparent">
+            <span className="text-primary">
               Technology Stack
             </span>
           </h2>

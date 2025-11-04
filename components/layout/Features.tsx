@@ -24,37 +24,37 @@ export default function FeaturesSection() {
       icon: Coffee,
       title: "Tokenized Coffee Reserves",
       description: "Digitize coffee into traceable and tradable ERC-1155 tokens secured by real-world coffee batches.",
-      gradient: "from-accent to-emerald-400",
+      accentColor: "bg-primary",
     },
     {
       icon: Shield,
       title: "Transparency & Traceability",
       description: "Track coffee batches from farm to cup, verifying ethical, quality, and sustainability parameters.",
-      gradient: "from-purple-500 to-purple-600",
+      accentColor: "bg-accent",
     },
     {
       icon: BarChart3,
       title: "DeFi Integration",
       description: "Access community-funded liquidity pools and tokenized collateral for loans and trade finance.",
-      gradient: "from-emerald-400 to-accent",
+      accentColor: "bg-primary",
     },
     {
       icon: Leaf,
       title: "Sustainable Farming",
       description: "Incentivize and reward sustainable farming practices through transparent verification.",
-      gradient: "from-purple-500 to-purple-600",
+      accentColor: "bg-accent",
     },
     {
       icon: Globe,
       title: "Global Marketplace",
       description: "Connect farmers directly with buyers worldwide through our decentralized marketplace.",
-      gradient: "from-cyan-400 to-accent",
+      accentColor: "bg-primary",
     },
     {
       icon: Zap,
       title: "WAGAToken Utility",
       description: "Access platform services, lower transaction costs, and earn rewards through our native token.",
-      gradient: "from-purple-500 to-purple-600",
+      accentColor: "bg-accent",
     },
   ]
 
@@ -76,7 +76,7 @@ export default function FeaturesSection() {
             repeat: Number.POSITIVE_INFINITY,
             ease: "easeInOut",
           }}
-          className="absolute top-1/3 -left-32 w-80 h-80 bg-accent/20 rounded-full blur-3xl"
+          className="absolute top-1/3 -left-32 w-80 h-80 bg-primary/20 rounded-full blur-3xl"
         />
         <motion.div
           animate={{
@@ -89,7 +89,7 @@ export default function FeaturesSection() {
             ease: "easeInOut",
             delay: 2,
           }}
-          className="absolute bottom-1/3 -right-32 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl"
+          className="absolute bottom-1/3 -right-32 w-80 h-80 bg-accent/20 rounded-full blur-3xl"
         />
       </div>
 
@@ -102,9 +102,7 @@ export default function FeaturesSection() {
             transition={{ duration: 0.6 }}
             className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6"
           >
-            <span className="bg-gradient-to-r from-accent via-emerald-400 to-accent bg-clip-text text-transparent">
-              Key Features
-            </span>
+            <span className="text-primary">Key Features</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -128,16 +126,16 @@ export default function FeaturesSection() {
             const Icon = feature.icon
             return (
               <motion.div key={index} variants={fadeIn}>
-                <div className="group relative h-full p-8 rounded-2xl bg-card/50 backdrop-blur-sm border border-emerald-950/90 hover:border-emerald-700/50 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-700/5">
+                <div className="group relative h-full p-8 rounded-2xl bg-card/50 backdrop-blur-sm border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5">
                   <div className="mb-6">
                     <div className="relative inline-flex">
                       <div
-                        className={`absolute inset-0 rounded-xl bg-gradient-to-br ${feature.gradient} opacity-20 blur-xl group-hover:opacity-30 transition-opacity`}
+                        className={`absolute inset-0 rounded-xl ${feature.accentColor}/20 opacity-20 blur-xl group-hover:opacity-30 transition-opacity`}
                       />
                       <div
-                        className={`relative flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br ${feature.gradient} shadow-lg`}
+                        className={`relative flex h-14 w-14 items-center justify-center rounded-xl ${feature.accentColor} shadow-lg`}
                       >
-                        <Icon className="h-7 w-7 text-white" />
+                        <Icon className="h-7 w-7 text-primary-foreground" />
                       </div>
                     </div>
                   </div>

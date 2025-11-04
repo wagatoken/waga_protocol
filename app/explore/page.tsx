@@ -17,6 +17,7 @@ import TokenRedemptionStep from "@/components/demo/steps/token-redemption-step"
 import QRTraceabilityStep from "@/components/demo/steps/qr-traceability-step"
 import DemoCompletionStep from "@/components/demo/steps/demo-completion-step"
 import { useDemoContext } from "@/context/demo-context"
+import { Card } from "@/components/ui/card"
 
 // Animation variants
 const fadeIn = {
@@ -36,24 +37,24 @@ export default function ExplorePage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-emerald-950/40 to-purple-950/30 pt-24 pb-16">
+    <div className="min-h-screen pt-24 pb-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div initial="hidden" animate="visible" variants={fadeIn}>
           <div className="mb-6">
             <Link href="/">
-              <Button variant="ghost" className="text-emerald-400 hover:text-emerald-300 p-0">
+              <Button variant="ghost" className="text-primeary hover:text-emerald-300 p-0">
                 <ArrowLeft className="h-4 w-4 mr-2" />
                 Back to Home
               </Button>
             </Link>
           </div>
 
-          <DynamicGlowCard variant="dual" className="p-6 mb-8">
+          <Card className="p-6 mb-8">
             <div className="flex items-center justify-between mb-4">
               <h1 className="text-2xl md:text-3xl font-bold">
-                <span className="web3-dual-gradient-text-glow">WAGA Coffee Tokenization Demo</span>
+                <span className="">WAGA Coffee Tokenization Demo</span>
               </h1>
-              <div className="bg-emerald-900/30 text-emerald-300 px-3 py-1 rounded-full text-sm border border-emerald-500/30">
+              <div className="text-emerald-300 px-3 py-1 rounded-full text-sm border border-emerald-500/30">
                 Interactive Demo
               </div>
             </div>
@@ -65,7 +66,7 @@ export default function ExplorePage() {
             <p className="text-sm text-gray-400">
               Note: This is a simulated environment using dummy data to demonstrate the platform's functionality.
             </p>
-          </DynamicGlowCard>
+          </Card>
 
           <div className="mb-8">
             <DemoStepNavigator />
@@ -102,7 +103,7 @@ function DemoStepContent() {
   )
 }
 
-function StepRenderer({ steps }) {
+function StepRenderer({ steps }:any) {
   const { currentStep } = useDemoContext()
   return steps[currentStep]
 }
@@ -114,7 +115,7 @@ function NavigationButtons() {
     <>
       <Button
         variant="outline"
-        className="border-emerald-500/30"
+        className=""
         onClick={goToPreviousStep}
         disabled={currentStep === 0}
       >
@@ -123,13 +124,13 @@ function NavigationButtons() {
       </Button>
 
       {currentStep < totalSteps - 1 ? (
-        <Button className="bg-gradient-to-r from-emerald-600 to-purple-600" onClick={goToNextStep}>
+        <Button className="" onClick={goToNextStep}>
           Next Step
           <ArrowRight className="h-4 w-4 ml-2" />
         </Button>
       ) : (
         <Link href="/">
-          <Button className="bg-gradient-to-r from-emerald-600 to-purple-600">
+          <Button className="">
             Return to Home
             <ArrowRight className="h-4 w-4 ml-2" />
           </Button>

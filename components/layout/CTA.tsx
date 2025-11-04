@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import Link from "next/link"
 import Web3Button from "../web3-button"
 import DynamicGlowCard from "../dynamic-glow-card"
+import { Button } from "../ui/button"
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -25,21 +26,21 @@ export default function Cta(){
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div variants={fadeIn}>
               <h2 className="mb-3 md:mb-4 text-2xl sm:text-3xl font-bold tracking-tight md:text-4xl text-center">
-                <span className="web3-dual-gradient-text-glow" style={gradientTextStyle}>
+                <span className="text-primary" >
                   Join the WAGA Ecosystem
                 </span>
               </h2>
-              <p className="mx-auto mb-6 md:mb-8 max-w-2xl text-base md:text-lg text-gray-300 text-center">
+              <p className="mx-auto mb-6 md:mb-8 max-w-2xl text-base md:text-lg text-center">
                 Be part of a movement to make the coffee value chain fair again. Whether you're a farmer, processor,
                 buyer, or enthusiast, there's a place for you in our community.
               </p>
               <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                <Web3Button size="lg" variant="gradient" className="w-full sm:w-auto" asChild>
+                <Button size="lg"  className="w-full sm:w-auto" asChild>
                   <Link href="/community/dashboard">Join Community</Link>
-                </Web3Button>
-                <Web3Button size="lg" variant="purple" className="w-full sm:w-auto">
+                </Button>
+                <Button size="lg"  className="w-full sm:w-auto">
                   Read Whitepaper
-                </Web3Button>
+                </Button>
               </div>
             </motion.div>
         </div>

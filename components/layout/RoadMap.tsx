@@ -111,7 +111,7 @@ export default function Roadmap() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
-            <span className="bg-gradient-to-r from-accent via-emerald-400 to-accent bg-clip-text text-transparent">
+            <span className="text-primary">
               Development Roadmap
             </span>
           </h2>

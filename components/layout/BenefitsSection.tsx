@@ -64,7 +64,7 @@ export default function BenefitsSection() {
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl font-bold tracking-tight mb-4"
           >
-            <span className="bg-gradient-to-r from-accent via-emerald-400 to-accent bg-clip-text text-transparent">
+            <span className="text-primary">
               Benefits for Stakeholders
             </span>
           </motion.h2>
@@ -87,8 +87,8 @@ export default function BenefitsSection() {
           className="grid gap-6 md:grid-cols-2"
         >
           <motion.div variants={fadeIn}>
-            <Card className="h-full p-8 bg-card/50 backdrop-blur-sm border-emerald-500/20 hover:border-emerald-800/40 transition-colors">
-              <h3 className="text-2xl font-bold mb-6 text-accent">For Farmers</h3>
+            <Card className="h-full p-8 bg-card/50 backdrop-blur-sm border-primary/60 hover:border-primary/40 transition-colors">
+              <h3 className="text-2xl font-bold mb-6 ">For Farmers</h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <div className="mt-1 flex-shrink-0">
@@ -125,8 +125,8 @@ export default function BenefitsSection() {
           </motion.div>
 
           <motion.div variants={fadeIn}>
-            <Card className="h-full p-8 bg-card/50 backdrop-blur-sm border-purple-500/20 hover:border-purple-500/40 transition-colors">
-              <h3 className="text-2xl font-bold mb-6 text-purple-900">For Processors & Exporters</h3>
+            <Card className="h-full p-8 bg-card/50 backdrop-blur-sm border-primary/60 hover:border-primary/40 transition-colors">
+              <h3 className="text-2xl font-bold mb-6 text-primary">For Processors & Exporters</h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <div className="mt-1 flex-shrink-0">
@@ -161,8 +161,8 @@ export default function BenefitsSection() {
           </motion.div>
 
           <motion.div variants={fadeIn}>
-            <Card className="h-full p-8 bg-card/50 backdrop-blur-sm border-emerald-500/20 hover:border-emerald-500/40 transition-colors">
-              <h3 className="text-2xl font-bold mb-6 text-accent">For Consumers</h3>
+            <Card className="h-full p-8 bg-card/50 backdrop-blur-sm border-primary/60 hover:border-primary/40 transition-colors">
+              <h3 className="text-2xl font-bold mb-6">For Consumers</h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <div className="mt-1 flex-shrink-0">
@@ -199,8 +199,8 @@ export default function BenefitsSection() {
           </motion.div>
 
           <motion.div variants={fadeIn}>
-            <Card className="h-full p-8 bg-card/50 backdrop-blur-sm border-purple-500/20 hover:border-purple-500/40 transition-colors">
-              <h3 className="text-2xl font-bold mb-6 text-purple-800">For Governments & Regulators</h3>
+            <Card className="h-full p-8 bg-card/50 backdrop-blur-sm border-primary/60 hover:border-primary/40 transition-colors">
+              <h3 className="text-2xl font-bold mb-6 text-primary">For Governments & Regulators</h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <div className="mt-1 flex-shrink-0">

@@ -36,12 +36,12 @@ export default function AboutSection() {
           transition={{ duration: 0.6 }}
           className="mx-auto max-w-3xl text-center mb-16 md:mb-20"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-600/5 border border-emerald-800/10 mb-6">
-            <Sparkles className="w-4 h-4 text-accent" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/50 border border-emerald-800/10 mb-6">
+            <Sparkles className="w-4 h-4 " />
             <span className="text-sm font-medium text-foreground">Our Mission</span>
           </div>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
-            <span className="bg-gradient-to-r from-accent via-emerald-400 to-accent bg-clip-text text-transparent">
+            <span className="text-primary ">
               About WAGA Protocol
             </span>
           </h2>
@@ -91,7 +91,7 @@ export default function AboutSection() {
               <div className="flex items-start gap-4 mb-8">
                 <div className="relative flex-shrink-0">
                   <div className="absolute -inset-2 rounded-full bg-purple-500/20 blur-md" />
-                  <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-purple-400 to-purple-600 shadow-lg">
+                  <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-primary shadow-lg">
                     <Package className="h-6 w-6 text-white" />
                   </div>
                 </div>
@@ -104,7 +104,7 @@ export default function AboutSection() {
               <div className="space-y-4 mb-6">
                 <div className="group rounded-xl border border-accent/30 bg-background/50 p-5 backdrop-blur-sm transition-all hover:border-accent/50 hover:bg-accent/5">
                   <div className="flex items-start gap-3 mb-3">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent/20 text-accent font-bold text-sm flex-shrink-0">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-accent font-bold text-sm flex-shrink-0">
                       1
                     </div>
                     <div>
@@ -121,7 +121,7 @@ export default function AboutSection() {
 
                 <div className="group rounded-xl border border-purple-500/30 bg-background/50 p-5 backdrop-blur-sm transition-all hover:border-purple-500/50 hover:bg-purple-500/5">
                   <div className="flex items-start gap-3 mb-3">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-purple-500/20 text-purple-400 font-bold text-sm flex-shrink-0">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-accent font-bold text-sm flex-shrink-0">
                       2
                     </div>
                     <div>

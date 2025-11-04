@@ -3,13 +3,7 @@ import { Twitter, Linkedin, Send, MessageSquare, FileText, Github } from "lucide
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-opacity-20 bg-gradient-to-r from-emerald-950/80 to-purple-950/80 backdrop-blur">
-      {/* Gradient border highlight */}
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 via-purple-500/50 to-transparent"></div>
-
-      {/* Animated background elements */}
-      <div className="absolute top-10 left-20 h-64 w-64 animate-float-slow rounded-full bg-emerald-500/5 blur-3xl"></div>
-      <div className="absolute bottom-10 right-20 h-64 w-64 animate-float animation-delay-2000 rounded-full bg-purple-500/5 blur-3xl"></div>
+    <footer className="relative overflow-hidden border-t border-opacity-20 ">
 
       <div className="container relative z-10 mx-auto px-3 py-8 sm:px-4 sm:py-10 md:py-12 lg:px-8">
         {/* Information Grid */}
@@ -107,9 +101,9 @@ export default function Footer() {
         </div>
 
         {/* Social Media Links */}
-        <div className="mt-8 pt-6 border-t border-purple-500/20 flex flex-col items-center space-y-4">
+        <div className="mt-8 pt-6 border-t flex flex-col items-center space-y-4">
           <h3 className="text-lg font-medium">
-            <span className="bg-gradient-to-r from-emerald-500 to-purple-500 bg-clip-text text-transparent">
+            <span className="">
               Connect With Us
             </span>
           </h3>
@@ -118,55 +112,55 @@ export default function Footer() {
               href="https://x.com/WagaAcademy"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full bg-gradient-to-br from-emerald-950/50 to-purple-950/50 border border-emerald-500/30 hover:border-emerald-500/60 hover:bg-emerald-500/10 transition-all duration-300 animate-border-glow"
+              className="p-2 rounded-full border transition-all duration-300 "
               aria-label="Twitter"
             >
-              <Twitter className="h-5 w-5 text-emerald-400" />
+              <Twitter className="h-5 w-5 " />
             </Link>
             <Link
               href="https://linkedin.com/company/waga-protocol"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full bg-gradient-to-br from-purple-950/50 to-emerald-950/50 border border-purple-500/30 hover:border-purple-500/60 hover:bg-purple-500/10 transition-all duration-300 animate-border-glow"
+              className="p-2 rounded-full border   transition-all duration-300 "
               aria-label="LinkedIn"
             >
-              <Linkedin className="h-5 w-5 text-purple-400" />
+              <Linkedin className="h-5 w-5 " />
             </Link>
             <Link
               href="https://t.me/wagaprotocol"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full bg-gradient-to-br from-emerald-950/50 to-purple-950/50 border border-emerald-500/30 hover:border-emerald-500/60 hover:bg-emerald-500/10 transition-all duration-300 animate-border-glow"
+              className="p-2 rounded-full border transition-all duration-300 "
               aria-label="Telegram"
             >
-              <Send className="h-5 w-5 text-emerald-400" />
+              <Send className="h-5 w-5 " />
             </Link>
             <Link
               href="https://discord.gg/wagaprotocol"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full bg-gradient-to-br from-purple-950/50 to-emerald-950/50 border border-purple-500/30 hover:border-purple-500/60 hover:bg-purple-500/10 transition-all duration-300 animate-border-glow"
+              className="p-2 rounded-full border transition-all duration-300 "
               aria-label="Discord"
             >
-              <MessageSquare className="h-5 w-5 text-purple-400" />
+              <MessageSquare className="h-5 w-5 " />
             </Link>
             <Link
               href="https://github.com/waga-protocol"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full bg-gradient-to-br from-emerald-950/50 to-purple-950/50 border border-emerald-500/30 hover:border-emerald-500/60 hover:bg-emerald-500/10 transition-all duration-300 animate-border-glow"
+              className="p-2 rounded-full border transition-all duration-300 "
               aria-label="GitHub"
             >
-              <Github className="h-5 w-5 text-emerald-400" />
+              <Github className="h-5 w-5 " />
             </Link>
             <Link
               href="https://docs.wagaprotocol.io"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full bg-gradient-to-br from-purple-950/50 to-emerald-950/50 border border-purple-500/30 hover:border-purple-500/60 hover:bg-purple-500/10 transition-all duration-300 animate-border-glow"
+              className="p-2 rounded-full border  transition-all duration-300 "
               aria-label="Documentation"
             >
-              <FileText className="h-5 w-5 text-purple-400" />
+              <FileText className="h-5 w-5 " />
             </Link>
           </div>
           <div className="mt-3 text-xs sm:text-sm text-muted-foreground text-center">

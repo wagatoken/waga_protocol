@@ -5,10 +5,11 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { MainNav } from "@/components/main-nav"
 import ConnectWalletButton from "@/components/connect-wallet-button"
-import Web3Button from "@/components/web3-button"
+import { ThemeCustomizerPanel } from '@/components/theme-customizer';
 import { cn } from "@/lib/utils"
 import { Menu, X } from "lucide-react"
 import { ThemeToggle } from "./theme-toggle"
+import { Button } from "./ui/button"
 
 export default function Navbar() {
   const pathname = usePathname()
@@ -35,10 +36,10 @@ export default function Navbar() {
     <>
       <header
         className={cn(
-          "fixed top-0 z-50 w-full bg-foreground/40 backdrop-blur ",
+          "fixed top-0 z-50 w-full bg-foreground/20 backdrop-blur ",
         )}
       >
-        <div className="container flex h-16 items-center justify-between px-4 md:px-6">
+        <div className="flex h-16 items-center justify-between w-full px-2">
           <Link href="/" className="flex items-center space-x-2 transition-opacity hover:opacity-80 md:px-28 px-6">
             <span className="text-xl font-bold tracking-tight">
               <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">WAGA</span>
@@ -55,9 +56,10 @@ export default function Navbar() {
             <div className="hidden md:flex items-center gap-3">
               <ThemeToggle />
               <ConnectWalletButton />
-              <Web3Button variant="gradient" size="sm" asChild>
+              <ThemeCustomizerPanel />
+              <Button>
                 <Link href="/community/register">Join Community</Link>
-              </Web3Button>
+              </Button>
             </div>
 
             {/* Mobile menu button */}
@@ -142,9 +144,9 @@ export default function Navbar() {
                   <ThemeToggle />
                 </div>
                 <ConnectWalletButton />
-                <Web3Button variant="gradient" size="lg" className="w-full" asChild>
+                <Button  asChild>
                   <Link href="/community/register">Join Community</Link>
-                </Web3Button>
+                </Button>
               </div>
             </nav>
           </div>
